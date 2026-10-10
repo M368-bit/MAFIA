@@ -1,0 +1,50 @@
+
+> mafia-night@0.1.0 dev
+> concurrently -n server,client -c magenta,cyan "npm run dev -w server" "npm run dev -w client"
+
+[client] 
+[client] > @mafia-night/client@0.1.0 dev
+[client] > vite
+[client] 
+[server] 
+[server] > dev
+[server] > tsx watch src/index.ts
+[server] 
+[client] Port 5173 is in use, trying another one...
+[client] Port 5174 is in use, trying another one...
+[client] 
+[client]   VITE v6.4.4  ready in 316 ms
+[client] 
+[client]   ➜  Local:   http://localhost:5175/
+[client]   ➜  Network: http://10.2.0.2:5175/
+[client]   ➜  Network: http://192.168.148.1:5175/
+[client]   ➜  Network: http://192.168.9.1:5175/
+[client]   ➜  Network: http://10.112.39.180:5175/
+[server] node:events:487
+[server]       throw er; // Unhandled 'error' event
+[server]       ^
+[server] 
+[server] Error: listen EADDRINUSE: address already in use 0.0.0.0:3001
+[server]     at Server.setupListenHandle [as _listen2] (node:net:2008:16)
+[server]     at listenInCluster (node:net:2065:12)
+[server]     at node:net:2274:7
+[server]     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+[server] Emitted 'error' event on Server instance at:
+[server]     at emitErrorNT (node:net:2044:8)
+[server]     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+[server]   code: 'EADDRINUSE',
+[server]   errno: -4091,
+[server]   syscall: 'listen',
+[server]   address: '0.0.0.0',
+[server]   port: 3001
+[server] }
+[server] 
+[server] Node.js v24.16.0
+[client] npm error Lifecycle script `dev` failed with error:
+[client] npm error code 4294967295
+[client] npm error path D:\مافيا\mafia-night\client
+[client] npm error workspace @mafia-night/client@0.1.0
+[client] npm error location D:\مافيا\mafia-night\client
+[client] npm error command failed
+[client] npm error command C:\WINDOWS\system32\cmd.exe /d /s /c vite
+[client] npm run dev -w client exited with code 4294967295
